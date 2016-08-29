@@ -27,7 +27,7 @@ print("Crypto Maps with group2")
 for j in crypto_group2:
     print j.text
 print ('\n')
-crypto_no_aes = cisco_cfg.find_objects_wo_child(r'crypto map', r'group2')
+crypto_no_aes = cisco_cfg.find_objects_wo_child(r'crypto map', r'AES')
 print("Crypto Maps without AES")
 for k in crypto_no_aes:
     print k.text
