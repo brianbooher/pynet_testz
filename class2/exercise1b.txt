@@ -1,0 +1,4 @@
+>>> pysnmp.version
+(4, 3, 2)
+>>> paramiko.__version__
+'2.0.2'
