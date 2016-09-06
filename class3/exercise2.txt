@@ -1,0 +1,17 @@
+I created two files, one to collect the data, every five minutes, for an hour and save it
+as a Pickle file. I initially tried to use json but had trouble reimporting the data
+between checks.
+ 
+File "GO_GET_DATA.py" collects the counters from each OID and saves it as a list in a list
+variable (so it's a list of lists). It then appends it to the list variable and writes it 
+to a file.
+
+Because it depends on a file to exist and contain data, I put checks in. If there's no file
+the script will create the file.
+
+File "chart_it.py" pulls data from the pickle file and massages it to a format for the
+svg file
+
+I didn't create a single py script that did both of these because I wanted to run them
+separately and troubleshoot them separately. It would of course be trivial to create a 3rd
+file and import and run these two.

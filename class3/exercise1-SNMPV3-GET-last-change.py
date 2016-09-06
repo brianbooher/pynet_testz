@@ -1,5 +1,9 @@
 #/usr/bin/env python
 
+#Originally build to save data in a pickle file.
+#now saves data in a JSON file. Checks three OID's for a change
+#and sends email if any one of them have changed.
+
 #### import statements
 import snmp_helper
 import pickle
