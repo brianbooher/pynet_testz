@@ -1,0 +1,56 @@
+#!/usr/bin/env python
+'''Script uses Netmiko to connect to router and enter config mode
+Please note. This script looks just like yours, but that was after I tried
+to take one of my previous scripts and keep the extended dictionary entries I had.
+it would seem that Netmiko does extensive error checking on the dictionaries
+to make sure the values are appropriate. '''
+
+#### import statements
+from netmiko import ConnectHandler
+
+#### constants
+RTR1 = {
+    'device_type': 'cisco_ios',
+    'ip' : '184.105.247.70',
+    'port' : 22,
+    'username' : 'pyclass',
+    'alt_key_file' : 'labhosts',
+    'ssh_strict' : True,
+    'alt_host_keys' : True,
+    'password' : '88newclass'}
+
+RTR2 = {
+    'device_type': 'cisco_ios',
+    'ip' : '184.105.247.71',
+    'port' : 22,
+    'username' : 'pyclass',
+    'alt_key_file' : 'labhosts',
+    'ssh_strict' : True,
+    'alt_host_keys' : True,
+    'password' : '88newclass'}
+
+JNPR_SRX1 = {
+    'device_type': 'juniper',
+    'ip' : '184.105.247.76',
+    'port' : 22,
+    'username' : 'pyclass',
+    'alt_key_file' : 'labhosts',
+    'ssh_strict' : True,
+    'alt_host_keys' : True,
+    'password' : '88newclass'}
+
+A_DEVICE_LIST = [RTR1, RTR2, JNPR_SRX1]
+
+#### functions
+
+
+# main function (this is the main execution code for your program)
+def main():
+    '''Main function, opens connection, enters config mode and verifies'''
+    for a_device in A_DEVICE_LIST:
+        a_connection = ConnectHandler(**a_device)
+        outp = a_connection.send_command("show arp")
+        print outp
+
+if __name__ == "__main__":                    # program execution starts here
+    main()                                                   # first action is to call main function
