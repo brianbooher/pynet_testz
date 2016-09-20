@@ -20,6 +20,7 @@ def change_config(a_command, a_connection, **host_details):
     a_connection.sendline(a_command)
     a_connection.expect(host_details['configureprompt'])
     a_connection.sendline("end")
+    print a_connection.before
     return a_connection.before
 
 # main function (this is the main execution code for your program)
