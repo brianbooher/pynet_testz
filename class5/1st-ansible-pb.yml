@@ -1,0 +1,15 @@
+---
+#first Ansible playbook
+- hosts: localhost
+  vars:
+    hostname: bswitch1
+    secret: banana
+    access_vlan: 50
+    ip_addr: 10.11.12.13
+    default_gateway: 10.11.12.1
+    snmp_community: lookerup
+                           
+  tasks:
+  - name: Generate switch configs
+     template: src=access_switch-ex1.j2 dest=CFGS/{{hostname}}.txt
+
