@@ -1,0 +1,33 @@
+---
+access_switches:
+    - {hostname: bswitch1, ip_addr: 10.11.12.10, secret: banana, default_gateway: 10.11.12.1, access_vlan: 50, snmp_community: show-us, snmpv3: TRUE}
+    - {hostname: bswitch2, ip_addr: 10.11.13.10, secret: banana, default_gateway: 10.11.13.1, access_vlan: 50, snmp_community: show-us, snmpv3: TRUE}
+    - {hostname: bswitch3, ip_addr: 10.11.14.10, secret: banana, default_gateway: 10.11.14.1, access_vlan: 50, snmp_community: show-us, snmpv3: TRUE}
+    - {hostname: bswitch4, ip_addr: 10.11.15.10, secret: banana, default_gateway: 10.11.15.1, access_vlan: 50, snmp_community: show-us, snmpv3: FALSE}
+    - {hostname: bswitch5, ip_addr: 10.11.16.10, secret: banana, default_gateway: 10.11.16.1, access_vlan: 50, snmp_community: show-us, snmpv3: FALSE}
+
+cisco_3750-24_interfaces:
+    -  1
+    -  2
+    -  3
+    -  4
+    -  5
+    -  6
+    -  7
+    -  8
+    -  9
+    -  10
+    -  11
+    -  12
+    -  13
+    -  14
+    -  15
+    -  16
+    -  17
+    -  18
+    -  19
+    -  20
+    -  21
+    -  22
+    -  23
+    -  24

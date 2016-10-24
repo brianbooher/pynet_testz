@@ -1,7 +1,7 @@
 ---
 access_switches:
     - {hostname: bswitch1, ip_addr: 10.11.12.10, secret: banana, default_gateway: 10.11.12.1, access_vlan: 50, snmp_community: show-us, snmpv3: TRUE}
-    - {hostname: bswitch2, ip_addr: 10.11.13.10, secret: banana, default_gateway: 10.11.13.1, access_vlan: 50, snmp_community: show-us, snmpv3: TRUE}
-    - {hostname: bswitch3, ip_addr: 10.11.14.10, secret: banana, default_gateway: 10.11.14.1, access_vlan: 50, snmp_community: show-us, snmpv3: TRUE}
-    - {hostname: bswitch4, ip_addr: 10.11.15.10, secret: banana, default_gateway: 10.11.15.1, access_vlan: 50, snmp_community: show-us, snmpv3: FALSE}
-    - {hostname: bswitch5, ip_addr: 10.11.16.10, secret: banana, default_gateway: 10.11.16.1, access_vlan: 50, snmp_community: show-us, snmpv3: FALSE}
+
+switchinterfaces:
+    -  1
+    -  2
