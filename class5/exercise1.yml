@@ -1,0 +1,9 @@
+---
+#first Ansible playbook
+- hosts: mylocal
+  vars:
+    hostname: bswitch1
+   
+  tasks:
+    - name: Generate 5 switch configs
+      template: src=/Users/bbooher/pynet_testz/class5/access_switch-ex1.j2 dest=/Users/bbooher/pynet_testz/class5/CFGS/bswitch1.txt
