@@ -1,6 +1,6 @@
 ---
 #first Ansible playbook
-- hosts: mylocal
+- hosts: local
   vars:
     hostname: bswitch1
    
