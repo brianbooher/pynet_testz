@@ -11,4 +11,4 @@
    
   tasks:
     - name: Generate 5 switch configs
-      template: src=access_switch-ex1.j2 dest=/CFGS/bswitch1.txt
+      template: src=access_switch-ex1.j2 dest=../../CFGS/bswitch1.txt
