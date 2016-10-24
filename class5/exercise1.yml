@@ -3,6 +3,11 @@
 - hosts: local
   vars:
     hostname: bswitch1
+    secret: banana
+    access_vlan: 50
+    ip_addr: 10.11.12.13
+    default_gateway: 10.11.12.1
+    snmp_community: show-us
    
   tasks:
     - name: Generate 5 switch configs
