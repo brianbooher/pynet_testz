@@ -1,0 +1,6 @@
+---
+- name: Generate switch configuration files
+  hosts: local
+
+  roles:
+    - access-switch

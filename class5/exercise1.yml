@@ -2,13 +2,19 @@
 #first Ansible playbook
 - hosts: local
   vars:
-    hostname: bswitch1
-    secret: banana
-    access_vlan: 50
-    ip_addr: 10.11.12.13
-    default_gateway: 10.11.12.1
-    snmp_community: show-us
+    
+    
+    
+    
+    
    
   tasks:
     - name: Generate 5 switch configs
-      template: src=access_switch-ex1.j2 dest=../../CFGS/bswitch1.txt
+      template: src=access_switch-ex1.j2 dest=../../CFGS/EX1-{{item.hostname}}.txt
+
+      with_items:
+        - {hostname: bswitch1, ip_addr: 10.11.12.10, secret: banana, default_gateway: 10.11.12.1, access_vlan: 50, snmp_community: show-us}
+        - {hostname: bswitch2, ip_addr: 10.11.13.10, secret: banana, default_gateway: 10.11.13.1, access_vlan: 50, snmp_community: show-us}
+        - {hostname: bswitch3, ip_addr: 10.11.14.10, secret: banana, default_gateway: 10.11.14.1, access_vlan: 50, snmp_community: show-us}
+        - {hostname: bswitch4, ip_addr: 10.11.15.10, secret: banana, default_gateway: 10.11.15.1, access_vlan: 50, snmp_community: show-us}
+        - {hostname: bswitch5, ip_addr: 10.11.16.10, secret: banana, default_gateway: 10.11.16.1, access_vlan: 50, snmp_community: show-us}
