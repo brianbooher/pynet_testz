@@ -1,0 +1,7 @@
+---
+access_switches:
+    - {hostname: bswitch1, ip_addr: 10.11.12.10, secret: banana, default_gateway: 10.11.12.1, access_vlan: 50, snmp_community: show-us, snmpv3: TRUE}
+
+switchinterfaces:
+    -  1
+    -  2
