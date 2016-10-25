@@ -8,7 +8,7 @@ no logging console
 enable secret 0 {{item.secret}}
 !
 !
-{% for an_interface in cisco_3750-24_interfaces %}
+{% for an_interface in switchinterfaces %}
 interface Fastethernet 0/{{an_interface}}
 	switchport access vlan {{item.access_vlan}}                
 	spanning-tree portfast
