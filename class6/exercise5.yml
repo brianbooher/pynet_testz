@@ -1,0 +1,14 @@
+---
+- name: Cisco File Transfer exercise 5
+  hosts: cisco
+  gather_facts: False
+  tasks:
+    - name: transfer file to cisco devices
+      cisco_file_transfer: source_file="/home/bbooher/ANSIBLE/doobydoo.txt"
+            dest_file=cisco_doobydoo.txt
+            overwrite=true
+            enable_scp=true
+            username={{ username }}
+            password={{ password  }}
+            host={{ host }}
+            port={{ port }}

@@ -1,0 +1,25 @@
+---
+- name: Arista Ansible scripts exercise 1
+  hosts: arista
+  tasks:
+    - name: create cannondale vlan
+      eos_vlan: name=cannondale vlanid=666
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+    - name: create specialized vlan
+      eos_vlan: name=specialized vlanid=777
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+    - name: create trek vlan
+      eos_vlan: name=trek vlanid=888
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https

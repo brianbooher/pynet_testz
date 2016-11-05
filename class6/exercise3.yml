@@ -1,0 +1,15 @@
+---
+- name: Arista Ansible scripts exercise 3
+  hosts: arista
+  tasks:
+    - name: Modify Ethernet5 trunk mode
+      eos_switchport: name=Ethernet5
+            mode=trunk
+            access_vlan=1
+            trunk_native_vlan=1
+            trunk_allowed_vlans=666,777,888
+            username={{ eapi_username }} 
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https

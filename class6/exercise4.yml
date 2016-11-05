@@ -1,0 +1,44 @@
+---
+- name: Arista Ansible scripts exercise 4
+  hosts: arista
+  tasks:
+    - name: Modify Ethernet5 description
+      eos_interface: name=Ethernet5
+            description=""
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+    - name: Modify Ethernet5 mode
+      eos_switchport: name=Ethernet5
+            mode=access
+            access_vlan=1
+            trunk_native_vlan=1
+            trunk_allowed_vlans=1-4094
+            username={{ eapi_username }} 
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+    - name: remove cannondale vlan
+      eos_vlan: vlanid=666 state=absent
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+    - name: remove specialized vlan
+      eos_vlan: vlanid=777 state=absent
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+    - name: remove trek vlan
+      eos_vlan: vlanid=888 state=absent
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
