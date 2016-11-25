@@ -2,26 +2,29 @@
 
 #### import statements
 import pyeapi
+from pprint import pprint
 
 #### constants
-<<<<<<< HEAD
-MY_switch = 'pynet-sw2'
-=======
 MY_SWITCH = 'pynet-sw2'
->>>>>>> fd3013a0931f12a81c2420a1f8ce33f4c7937277
 
 #### functions and classes
-def parse_Value(a_device, a_command):
+
+def parse_ethernet_interfaces(a_device):
+    ethernet_interfaces = dict()
     a_connection = pyeapi.connect_to(a_device)
-    show_interfaces = a_connection.enable(a_command)
+    show_interfaces = a_connection.enable("show interfaces")
     all_interfaces = show_interfaces[0]["result"]["interfaces"]
     for an_interface in all_interfaces:
         if "Ethernet" in an_interface:
-            in-out-octets = {an_interface :  all_interfaces[an_interface][name]
+            ethernet_interfaces.update({an_interface : {'interfacename' : all_interfaces[an_interface]["name"]}})
+            ethernet_interfaces[an_interface].update({'inoctets' : all_interfaces[an_interface]["interfaceCounters"]["inOctets"]})
+            ethernet_interfaces[an_interface].update({'outoctets' : all_interfaces[an_interface]["interfaceCounters"]["outOctets"]})
+    return ethernet_interfaces
 
 # main function (this is the main execution code for your program)
 def main():
-     parse_Value(MY_SWITCH, 'show interfaces')
+    the_interfaces = parse_ethernet_interfaces(MY_SWITCH)
+    pprint(the_interfaces)
 
      # any variables from main() that need passed into other functions would be passed as arguments
 
