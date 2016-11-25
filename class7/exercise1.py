@@ -4,8 +4,7 @@
 import pyeapi
 
 #### constants
-MY_VAL = 'whatever'
-OTHER_CONST = 'something else'
+MY_switch = 'pynet-sw2'
 
 #### functions and classes
 def func1(arg1, arg2):
