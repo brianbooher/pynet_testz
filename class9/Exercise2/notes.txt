@@ -1,0 +1,27 @@
+ellington:Exercise2 bbooher$ python
+Python 2.7.12 (default, Nov  6 2016, 22:04:28) 
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+>>> mytest.func1()
+This is world.py func1
+>>> mytest.func2()
+This is simple.py func2
+>>> mytest.func3()
+This is whatever.py func3
+>>> quit()
+ellington:Exercise2 bbooher$ python
+Python 2.7.12 (default, Nov  6 2016, 22:04:28) 
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from mytest import func1
+>>> from mytest import func2
+>>> from mytest import func3
+>>> func1()
+This is world.py func1
+>>> func2()
+This is simple.py func2
+>>> func3()
+This is whatever.py func3
+>>> 
+

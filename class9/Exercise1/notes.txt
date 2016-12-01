@@ -1,0 +1,10 @@
+ellington:Exercise1 bbooher$ python
+Python 2.7.12 (default, Nov  6 2016, 22:04:28) 
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest
+>>> quit()
+

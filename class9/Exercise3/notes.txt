@@ -1,0 +1,14 @@
+ellington:Exercise3 bbooher$ python
+Python 2.7.12 (default, Nov  6 2016, 22:04:28) 
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from mytest import *
+>>> func1()
+This is world.py func1
+>>> func2()
+This is simple.py func2
+>>> func3()
+This is whatever.py func3
+>>> dir()
+['__builtins__', '__doc__', '__name__', '__package__', 'func1', 'func2', 'func3']
+
