@@ -8,6 +8,9 @@ from mytest import *
 
 # main function (this is the main execution code for your program)
 def main():
+    print func1()
+    print func2()
+    print func3()
     my_obj = MyClass('banana', 'red', 'scorpion')
     print my_obj.var1, my_obj.var2, my_obj.var2
     print my_obj.hello()
