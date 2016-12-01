@@ -12,7 +12,7 @@ def main():
     print func2()
     print func3()
     my_obj = MyClass('banana', 'red', 'scorpion')
-    print my_obj.var1, my_obj.var2, my_obj.var2
+    print my_obj.var1, my_obj.var2, my_obj.var3
     print my_obj.hello()
     print my_obj.not_hello()
     
