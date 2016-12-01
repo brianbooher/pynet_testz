@@ -1,0 +1,4 @@
+It takes about 39 seconds to run the "show ver" command sequentially. 
+
+It takes just under 9 seconds to run the "show ver" command concurrently using
+threads.
